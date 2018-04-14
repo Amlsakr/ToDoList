@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_add_task"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    tools:context="com.example.aml.todolist.AddTaskActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:id="@+id/edit_text_task_description"
+        android:hint="@string/edit_task_description"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/primary_text_light"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/priority"
+        />
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:weightSum="3">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@android:color/primary_text_light"
+            android:layout_weight="1"
+            android:background="@color/materialRed"
+            android:onClick="onPrioritySelected"
+            android:id="@+id/buttonP1"
+            android:text="@string/high_priority"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@android:color/primary_text_light"
+            android:layout_weight="1"
+            android:background="@color/materialOrange"
+            android:onClick="onPrioritySelected"
+            android:id="@+id/buttonP2"
+         android:text="@string/med_priority"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@android:color/primary_text_light"
+            android:layout_weight="1"
+            android:background="@color/materialYellow"
+            android:onClick="onPrioritySelected"
+            android:id="@+id/buttonP3"
+            android:text="@string/low_priority"
+            />
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:weightSum="3">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:onClick="onPrioritySelected"
+            android:id="@+id/rdButton1"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:onClick="onPrioritySelected"
+            android:id="@+id/rdButton2"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onPrioritySelected"
+            android:id="@+id/rdButton3"
+            tools:ignore="MissingPrefix"
+            style="@style/WhiteRadioButton"/>
+
+    </RadioGroup>
+
+</FrameLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_button"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/primary_text_dark"
+        android:background="@color/colorPrimary"
+        android:id="@+id/add_button"
+        android:onClick="onAddTask"/>
+
+</LinearLayout>
